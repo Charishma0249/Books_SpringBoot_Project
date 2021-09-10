@@ -31,6 +31,7 @@ public class BookController {
     public ResponseEntity<Object> getBookById(@PathVariable String bookId)
     {
         BookModel book = bookService.getBook(bookId);
+        System.out.println("Get Book by id");
         return  new ResponseEntity<>(book, HttpStatus.OK);
     }
 
